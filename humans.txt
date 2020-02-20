@@ -3,13 +3,14 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Sarah Manning, developer
 
 # THANKS
 
-    <name>
+    CU Boulder for taking my money
+    David Schaal for teaching this class
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    CSS3, HTML5, Sass
+    Apache Server Configs, jQuery, Modernizr, Normalize.css, Gulp,js
