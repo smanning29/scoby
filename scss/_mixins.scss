@@ -1,0 +1,11 @@
+@mixin rounded-corner {
+    -webkit-border-radius: $round;
+    border-radius: $round;
+}
+
+@mixin box {
+    background: $contrast-color;
+    // border: solid 2px $dark-color;
+    padding: 20px;
+    @include rounded-corner;
+}
