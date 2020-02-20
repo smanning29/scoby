@@ -1,55 +1,20 @@
 //author styles
+ body{
+    background-color: $bg-color;
+ }
 
-body {
-    background-color: $base-color;
-    color: $dark-color;
-    font-family: $body-font;
-}
+ //wraps around body
+ #container {
+    width: 100%;
+    background-color: $container-color;
+ }
 
-header{
-    h1{
-        font-family: $display-font;
-        font-size: 3em;
-    }//h1
-}//header
+ header{
+     h1{
+         font-family: $display-font;
+     }
+ }
 
-p {
-    @include box
-}
-
-nav{
-    @include box
-    ul {
-    margin-left: -40px;
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-        li {
-            a{
-                text-decoration: none;
-                padding: 10px;
-                @include rounded-corner;
-            }//a
-            a:link, a:visited {
-                color: black;
-            }
-            a:hover, a:active{
-                background: $dark-color;
-                color: white;
-            }
-        }//li
-    }//ul
-}//nav
-
-//layout
-.container{
-    display: grid;
-    max-width: 960px;
-    margin: 0 auto;
-}
-
-@media only screen and (max-width: 605px) {
-    body {
-        background: blue;
-    }
-}
+ p {
+     font-family: $body-font;
+ }

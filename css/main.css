@@ -1,48 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond|Montserrat&display=swap");
 body {
-  background-color: #cda8f0;
-  color: #051944;
-  font-family: "Montserrat", sans-serif; }
+  background-color: white; }
+
+#container {
+  width: 100%;
+  background-color: white; }
 
 header h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 3em; }
+  font-family: "Cormorant Garamond", serif; }
 
 p {
-  background: #63c7d4;
-  padding: 20px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px; }
-
-nav {
-  background: #63c7d4;
-  padding: 20px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px; }
-  nav ul {
-    margin-left: -40px;
-    list-style: none;
-    display: flex;
-    justify-content: space-around; }
-    nav ul li a {
-      text-decoration: none;
-      padding: 10px;
-      -webkit-border-radius: 10px;
-      border-radius: 10px; }
-    nav ul li a:link, nav ul li a:visited {
-      color: black; }
-    nav ul li a:hover, nav ul li a:active {
-      background: #051944;
-      color: white; }
-
-.container {
-  display: grid;
-  max-width: 960px;
-  margin: 0 auto; }
-
-@media only screen and (max-width: 605px) {
-  body {
-    background: blue; } }
+  font-family: "Montserrat", sans-serif; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
