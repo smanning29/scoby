@@ -3,14 +3,40 @@ body {
   background-color: white; }
 
 #container {
+  background-color: #ebc8ff;
   width: 100%;
-  background-color: white; }
+  max-width: 1400px;
+  margin: 0px auto;
+  padding: 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: stretch; }
 
-header h1 {
-  font-family: "Cormorant Garamond", serif; }
+header {
+  width: 100%;
+  text-align: center; }
+  header h1 {
+    font-family: "Cormorant Garamond", serif; }
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch; }
+  nav ul {
+    list-style: none; }
+    nav ul li a {
+      text-decoration: none; }
 
 p {
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  padding-left: 20px;
+  padding-right: 20px; }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
