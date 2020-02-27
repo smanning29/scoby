@@ -27,22 +27,7 @@
      }//h1
  }
 
- nav{
-     width: 100%;
-     display: flex;
-     flex-wrap:wrap; 
-     flex-direction:row; 
-     justify-content:center; 
-     align-items:stretch;
-     ul{
-        list-style: none;
-        li{
-            a{
-                text-decoration: none;
-            }//a
-        }//li
-     }//ul
- }
+
 
  p {
      font-family: $body-font;

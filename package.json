@@ -21,8 +21,10 @@
   },
   "homepage": "https://github.com/smanning29/scoby#readme",
   "devDependencies": {
+    "auto-prefixer": "^0.4.2",
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2"
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
   }
 }
