@@ -1,12 +1,8 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
-const autoprefixer = require('gulp-autoprefixer')
-const sourcemaps = require('gulp-sourcemaps')
-
 function style() {
 return gulp.src('./scss/**/*.scss')
-.pipe(sourcemaps.init())
 //default style indented based on nesting
 .pipe(sass({outputStyle: 'nested'}))
 //indented but not based on nesting
@@ -16,10 +12,6 @@ return gulp.src('./scss/**/*.scss')
 //production css (minified) one line no white space
 // .pipe(sass({outputStyle: 'compressed'}))
 .pipe(browserSync.stream())
-.pipe(autoprefixer({
-    cascade: false
-}))
-.pipe(sourcemaps.write('.'))
 .pipe(gulp.dest('./css'));
 }
 
