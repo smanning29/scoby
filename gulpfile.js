@@ -1,36 +1,26 @@
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const browserSync = require('browser-sync').create();
-const autoprefixer = require('gulp-autoprefixer')
-const sourcemaps = require('gulp-sourcemaps')
+var gulp = require('gulp');
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var tailwindcss = require('tailwindcss');
+var browserSync = require('browser-sync').create();
 
-function style() {
-return gulp.src('./scss/**/*.scss')
-.pipe(sourcemaps.init())
-//default style indented based on nesting
-.pipe(sass({outputStyle: 'nested'}))
-//indented but not based on nesting
-// .pipe(sass({outputStyle: 'expanded'}))
-//rules are one line
-// .pipe(sass({outputStyle: 'compact'}))
-//production css (minified) one line no white space
-// .pipe(sass({outputStyle: 'compressed'}))
-.pipe(browserSync.stream())
-.pipe(autoprefixer({
-    cascade: false
-}))
-.pipe(sourcemaps.write('.'))
-.pipe(gulp.dest('./css'));
-}
+gulp.task('css', function () {
+      var plugins = [
+        autoprefixer,
+        tailwindcss
+    ];
+    return gulp.src('./src/*.css')
+      .pipe(postcss(plugins))
+      .pipe(browserSync.stream())
+      .pipe(gulp.dest('./dest/css'));
+  });
 
-function watch() { browserSync.init({
-server: {
-baseDir: './' }
-});
-gulp.watch('./scss/**/*.scss', {ignoreInitial: false}, style);
-gulp.watch('./*.html').on('change', browserSync.reload);
-gulp.watch('./js/**/*.js').on('change', browserSync.reload);
-}
+  function watch() { browserSync.init({
+    server: {
+    baseDir: './dest' }
+    });
 
-exports.style = style;
-exports.watch = watch;
+    gulp.watch('./dest/*.html').on('change', browserSync.reload);
+    }
+
+    exports.watch = watch;
